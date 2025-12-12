@@ -1,262 +1,158 @@
-body {
-  font-family: Arial, Sans-Serif;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-  background-color: white;
-  
-}
+/* -------------------------------------------------- */
+
+
+/* -------------------------------------------------- */
+/* HEADER / LOGO / TOP BAR */
+/* -------------------------------------------------- */
 
 .pagecontent {
-  background-color: white;
-  width: 100%;
   display: flex;
-  padding: 20px 0;
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.text1 {
+color: #8f373e;
+font-family: Fredoka, sans-serif;
+font-optical-sizing: auto;
+font-weight: 600;
+font-style: normal;
+font-variation-settings:
+  "wdth" 100;
+}
+
+.text2 {
+color: #90373e;
+font-family: Fredoka, sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+ font-style: normal;
+font-variation-settings:
+  "wdth" 100;
+}
+
+.text3 {
+color: #898989;
 }
 
 .divtop {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  padding: 0;
-  box-sizing: border-box;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 5px 10px 10px #949494;
+background-color: #F7EFEF;
+border-top: 1px ridge;
+margin-top: 10px;
 }
+
 
 .divlogo {
-  width: auto;
-  height: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
 }
 
+
+/* LOGO BUTTON */
 .logobutton {
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  padding: 0;
-  transition: 0.5s ease;
-  background-color: white;
+cursor: pointer;
+border: none;
+padding: 0;
+border-radius: 50%;
+background-color: transparent;
+transition: 0.4s ease;
+display: inline-block;
+align-self: start;
 }
+
 
 .logobutton:hover {
-  opacity: 0.5;
-  
+opacity: 0.5;
 }
+
 
 .logoimg {
-  width: 100px;
-  height: auto;
-  display: block;
-  border-radius: 50%;
+width: 100px;
+height: auto;
+border-radius: 50%;
 }
 
 
-
+/* SIDEBAR DROPDOWN BUTTON */
 .buttontosidebar {
-  cursor: pointer;
-  font-size: 20px;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  transition: color 0.5s ease;
+cursor: pointer;
+font-size: 24px;
+border: none;
+background-color: transparent;
+border-radius: 50%;
+transition: 0.3s ease;
+padding: 5px 10px;
+align-self: end;
+color: #90373e;
 }
+
 
 .buttontosidebar:hover {
-  color: rgba(50,50,50,0.5);
+opacity: 0.5;
 }
 
-.divtitle {
-  border-radius: 5px;
-  width: 100%;
-  background-color: white;
-  padding: 0;
-  box-sizing: border-box;
+.dropdown-item:hover {
+transition: 0.5s;
+color: rgba(50,50,50, 0.5);
 }
 
-.title {
-  color: black;
-  padding: 0;
-  font-size: auto;
+.divquemsomos {
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 5px 10px 10px #949494;
+margin-top: 40px;
+border-top: 1px ridge;
+background-color: #F7EFEF;
 }
 
-.divmiddle {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  padding: 0;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.divsidebar {
-  width: 143px;
-  height: auto;
-  background-color: white;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.itemselectsidebar {
-  cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
-  height: 30px;
-  background-color: white;
+.divgeneral-text {
+  width: 75%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-  border: none;
-}
-
-.itemselectsidebar span {
-  position: relative;
-  transition: 0.5s;
-}
-
-.itemselectsidebar span:after {
-  content: '\00bb';
-  color: black;
-  position: absolute;
-  opacity: 0;
   align-content: center;
-  right: -20%;
-  top: 30%;
-  transition: 0.5s;
-}
-
-.itemselectsidebar:hover span {
-  padding-right: 20%;
-}
-
-.itemselectsidebar:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.itemsidebar {
-  color: black;
-  padding: 0;
-  font-size: auto;
-}
-
-.divoptions {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  padding: 0;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-}
-
-.divlocationbuttonoptions {
-  width: 100%;
-  height: 50px;
-  background-color: rgb(225,225,225);
+  box-shadow: 5px 10px 10px #949494;
+  margin-top: 15px;
+  border-top: 1px ridge;
+  background-color: #D3D3D3;
   padding: 10px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.buttonoptions {
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: none;
-  background-color: white;
-}
 
-.buttonoptions span {
-  position: relative;
-  display: inline-block;
-  transition: transform 0.3s ease; /* animação suave */
-}
 
-/* estado inicial do pseudo-elemento */
-.buttonoptions span:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px; /* apenas para não interferir */
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-}
-
-/* animação ao passar o mouse */
-.buttonoptions:hover span {
-  transform: translateY(-5px); /* sobe levemente */
-}
-
-.buttonoptions:hover span:after {
-  opacity: 0.4;
-}
-
-.options {
-  color: black;
-  padding: 0;
-  font-size: auto;
-}
-
+/* -------------------------------------------------- */
+/* FLOATING BUTTON (WhatsApp) */
+/* -------------------------------------------------- */
 .floatingbutton {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 999;
-  color: rgb(37,211,102);
-  width: auto;
-  height: auto;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  background-color: white;
-  font-size: 36px;
+position: fixed;
+bottom: 40px;
+right: 40px;
+z-index: 999;
+cursor: pointer;
+font-size: 36px;
+background-color: transparent;
+border: none;
+color: rgb(37, 211, 102);
+display: flex;
 }
+
 
 .floatingbutton span {
-  position: relative;
-  display: inline-block;
-  transition: transform 0.3s ease; /* animação suave */
+position: relative;
+display: inline-block;
+transition: transform 0.3s ease;
 }
 
-/* estado inicial do pseudo-elemento */
-.floatingbutton span:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px; /* apenas para não interferir */
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-}
 
-/* animação ao passar o mouse */
 .floatingbutton:hover span {
-  transform: translateY(-15px); /* sobe levemente */
-}
-
-.floatingbutton:hover span:after {
-  opacity: 0.4;
+transform: translateY(-15px);
 }
