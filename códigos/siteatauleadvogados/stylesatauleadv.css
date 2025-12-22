@@ -1,16 +1,12 @@
-/* -------------------------------------------------- */
-
-
-/* -------------------------------------------------- */
-/* HEADER / LOGO / TOP BAR */
-/* -------------------------------------------------- */
 
 .pagecontent {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+  cursor: default;
 }
+
 
 .text1 {
 color: #8f373e;
@@ -22,6 +18,7 @@ font-variation-settings:
   "wdth" 100;
 }
 
+
 .text2 {
 color: #90373e;
 font-family: Fredoka, sans-serif;
@@ -32,9 +29,11 @@ font-variation-settings:
   "wdth" 100;
 }
 
+
 .text3 {
 color: #898989;
 }
+
 
 .divtop {
 width: 100%;
@@ -56,7 +55,6 @@ gap: 10px;
 }
 
 
-/* LOGO BUTTON */
 .logobutton {
 cursor: pointer;
 border: none;
@@ -81,7 +79,6 @@ border-radius: 50%;
 }
 
 
-/* SIDEBAR DROPDOWN BUTTON */
 .buttontosidebar {
 cursor: pointer;
 font-size: 24px;
@@ -99,12 +96,23 @@ color: #90373e;
 opacity: 0.5;
 }
 
-.dropdown-item:hover {
-transition: 0.5s;
-color: rgba(50,50,50, 0.5);
+
+.dropdown-item {
+background-color: white;
 }
 
-.divquemsomos {
+.dropdown-item:hover {
+transition: 0.5s;
+opacity: 0.5;
+}
+
+
+.dropdown-menu {
+background-color: white; 
+}
+
+
+.divgeneral-div {
 width: 50%;
 display: flex;
 justify-content: center;
@@ -114,6 +122,7 @@ margin-top: 40px;
 border-top: 1px ridge;
 background-color: #F7EFEF;
 }
+
 
 .divgeneral-text {
   width: 75%;
@@ -128,10 +137,6 @@ background-color: #F7EFEF;
 }
 
 
-
-/* -------------------------------------------------- */
-/* FLOATING BUTTON (WhatsApp) */
-/* -------------------------------------------------- */
 .floatingbutton {
 position: fixed;
 bottom: 40px;
@@ -156,3 +161,4 @@ transition: transform 0.3s ease;
 .floatingbutton:hover span {
 transform: translateY(-15px);
 }
+
