@@ -4,16 +4,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-flow: column nowrap;
-}
-
-.pagecontent {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: column nowrap;
+background-color: #f3eed9;
 cursor: default;
 }
-
 
 .text1 {
 color: #8f373e;
@@ -23,179 +16,100 @@ font-weight: 600;
 font-style: normal;
 font-variation-settings:
   "wdth" 100;
-  cursor: text;
 }
 
-
-.text2 {
-color: #90373e;
-font-family: Fredoka, sans-serif;
-font-optical-sizing: auto;
-font-weight: 500;
- font-style: normal;
-font-variation-settings:
-  "wdth" 100;
-  cursor: text;
-}
-
-
-.text3 {
-color: #898989;
-}
-
-
-.divtop {
-width: 90%;
-box-shadow: 5px 10px 10px #949494;
-background-color: #F7EFEF;
-border-top: 1px ridge;
-margin-top: 10px;
-top: 0px;
-}
-
-
-.divlogo {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 10px;
-}
-
-
-.logobutton {
+.whatsappbutton {
+position: absolute;
+right: 50px;
+bottom: 50px;
+color: #25D366;
+z-index: 999;
+font-size: 36px;
 cursor: pointer;
-border: none;
-padding: 0;
-border-radius: 50%;
-background-color: transparent;
-transition: 0.4s ease;
-display: inline-block;
-align-self: start;
 }
 
+.whatsappbutton span {
+transition: transform 0.3s ease, opacity 0.3s ease;
+display: inline-block;
+position: relative;
+}
 
-.logobutton:hover {
+.whatsappbutton:hover span {
+transform: translateY(-15px);
 opacity: 0.5;
 }
 
-
-.logoimg {
-width: 100px;
-height: auto;
-border-radius: 50%;
-}
-
-
 .buttontosidebar {
+all: unset;
 cursor: pointer;
-font-size: 24px;
-border: none;
-background-color: transparent;
-border-radius: 50%;
-transition: 0.3s ease;
-padding: 5px 10px;
-align-self: end;
+font-size: 28px;
 color: #90373e;
+width: 55px;
+height: 55px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: opacity 0.3s ease;
 }
-
 
 .buttontosidebar:hover {
 opacity: 0.5;
 }
 
-
-.dropdown-item {
-background-color: white;
+.buttontosidebar:focus-visible {
+outline: 2px solid #90373e;
+outline-offset: 4px;
 }
 
-.dropdown-item:hover {
-transition: 0.5s;
-opacity: 0.5;
+/* Wrapper */
+.floating-dropdown {
+position: fixed;
+top: 40px;
+right: 40px;
+z-index: 1000;
 }
 
-
-.dropdown-menu {
-background-color: white; 
+.menu {
+list-style: none;
+margin: 10px 0 0;
+padding: 0;
+background: white;
+border: 1px transparent;
+overflow: hidden;
+height: 0;
+transition: height 0.35s ease;
 }
 
+.menu.open {
+  max-height: 500px;
+  border: 1px groove lightgray;
+}
 
-.divgeneral-div {
-width: 50%;
+/* Items */
+.menu li a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu hr {
+  margin: 6px 0;
+}
+
+.firstdiv {
 display: flex;
 justify-content: center;
 align-items: center;
-box-shadow: 5px 10px 10px #949494;
-margin-top: 40px;
-border-top: 1px ridge;
-background-color: #F7EFEF;
+flex-direction: column;
+flex-wrap: nowrap;
 }
 
-
-.divgeneral-text {
-width: 75%;
-display: flex;
-justify-content: center;
-align-content: center;
-box-shadow: 5px 10px 10px #949494;
-margin-top: 15px;
-border-top: 1px ridge;
-background-color: #D3D3D3;
-padding: 10px;
+.logoimage {
+width: 50%;
 }
-
-
-.floatingbutton {
-position: fixed;
-bottom: 40px;
-right: 40px;
-z-index: 999;
-cursor: pointer;
-font-size: 36px;
-background-color: transparent;
-border: none;
-color: rgb(37, 211, 102);
-display: flex;
-}
-
-
-.floatingbutton span {
-position: relative;
-display: inline-block;
-transition: transform 0.3s ease;
-}
-
-
-.floatingbutton:hover span {
-transform: translateY(-15px);
-}
-
-
-.floating-dropdown-wrapper {
-  position: fixed;
-  top: 40px;
-  right: 60px;
-  z-index: 1000;
-}
-
-
-.floating-menu {
-  background-color: transparent;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-  opacity: 0;
-  transform: scale(0.7) translateY(-10px);
-  pointer-events: none;
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-
-.floating-dropdown-wrapper.show .floating-menu {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  pointer-events: auto;
