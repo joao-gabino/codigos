@@ -1,20 +1,42 @@
 
+:root {
+  --bs-focus-ring-color: rgba(185, 215, 253, 0);
+
 $input-btn-font-family: "Nunito", sans-serif;
+
 
 html {
 scroll-behavior: smooth;
 }
 
 body {
-  padding: 0;
   background-color: #333335;
   cursor: default;
   display: flex;
+  justify-content: center;
   flex-flow: column nowrap;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+.blocker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.75;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: height;
+  z-index: 999;
+  transition: opacity 0,1s ease;
+  cursor: default;
 }
 
 .text1 {
@@ -22,17 +44,15 @@ color: #cecde2;
 }
 
 .divtop {
-  background-color: #242434;
+  background-color: #32697d;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: nowrap;
   align-items: center;
   width: 100%;
   height: 80px;
-  align-self: center;
   margin: 0;
-  z-index: 999;
-  position: fixed;
+  z-index: 998;
   top: 0;
   border-bottom: outset 1px gray;
 }
@@ -42,21 +62,45 @@ color: #cecde2;
   margin: 0;
 }
 
+.logoicon {
+  font-size: 30px;
+  cursor: pointer;
+  transition: color;
+}
+
+.logoicon:hover {
+  color: white;
+}
+
 .divsearch {
   display: flex;
   width: 40%;
   height: 100%;
-  justify-content: space-around;
   align-items: center;
+  align-self: left;
 }
 
 .searchbar {
-  background-color: #453f54;
+  display: flex;
+  background-color: #013746;
   border: 1px solid #cecde2;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 40px;
   width: 80%;
   text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  transition: border;
+  color: #cecde2;
+}
+
+
+
+.searchbar:hover {
+  border: 2px solid #cecde2;
 }
 
 [type="search"]::-webkit-search-cancel-button {
@@ -71,17 +115,24 @@ color: #cecde2;
 
 
 .searchbutton {
-  background-color: #453f54;
-  border: 1px solid #cecde2;
-  border-radius: 10px;
+  background-color: #32697d;
+  color: #cecde2;
+  border: 1px solid transparent;
+  border-radius: 50%;
   height: 40px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  width: 40px;
+  transition: color;
   cursor: pointer;
 }
 
 .searchbutton:hover {
-  opacity: 0.5;
+  color: white;
+}
+
+.btn:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .buttondropdown {
@@ -95,12 +146,12 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-transition: opacity 0.3s ease;
-align-self: end;
+transition: color;
+color: #cecde2;
 }
 
 .buttondropdown:hover {
-opacity: 0.5;
+color: white;
 }
 
 .buttondropdown:focus-visible {
@@ -109,21 +160,26 @@ outline-offset: 4px;
 }
 
 .menu {
-  position: absolute;
-  top: 100%;
-  width: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+position: fixed;
+top: 0;
+right:0;
+width: 365px;
 list-style: none;
-margin: 10px 0 0;
 padding: 0;
-background: #4a495b;
-border: 1px transparent;
+background-color: #013746;
 overflow: hidden;
 height: 0;
 transition: height 0.35s ease;
+z-index: 1000;
+margin: 0;
 }
 
 .menu.open {
-  max-height: 250px;
+  height: 100%;
+  overflow: auto;
 }
 
 
@@ -140,4 +196,44 @@ transition: height 0.35s ease;
 
 .menu hr {
   margin: 6px 0;
+}
+
+.closemenu {
+  position: fixed;
+  right: 380px;
+  background-color: transparent;
+  height: 35px;
+  top: 15px;
+  border: transparent;
+  border-radius: 50%;
+  width: 35px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease, color;
+  z-index: 997;
+  font-size: 30px;
+  color: #cecde2;
+  cursor: pointer;
+  background-color: 013746;
+}
+
+.closemenu.open {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.closemenu:hover {
+  color: white;
+}
+
+.divcarousel {
+  width: 80%;
+  height: auto;
+  align-self: center;
+}
+
+.carouselimgsize{
+  width: 100%;
+  height: 250px;
 }
