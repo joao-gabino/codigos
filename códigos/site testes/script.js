@@ -26,3 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("open");
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".closemenu-toggle");
+  const closemenu = document.querySelector(".closemenu");
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    const isOpen = closemenu.classList.contains("open");
+
+    if (isOpen) {
+      // CLOSE
+      closemenu.style.height = menu.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        closemenu.style.height = "0px";
+        closemenu.classList.remove("open");
+      });
+    } else {
+      // OPEN
+      closemenu.classList.add("open");
+      closemenu.style.height = menu.scrollHeight + "px";
+    }
+  });
+
+  document.addEventListener("click", () => {
+    closemenu.style.height = "0px";
+    closemenu.classList.remove("open");
+  });
+});
