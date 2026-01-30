@@ -21,6 +21,7 @@ body {
   font-style: normal;
 }
 .blocker {
+  user-select: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -37,13 +38,19 @@ body {
   z-index: 999;
   transition: opacity 0,1s ease;
   cursor: default;
+  border: none;
 }
 
-.text1 {
+.colorwhite {
 color: #cecde2;
 }
 
+.colorblack {
+  color: black;
+}
+
 .divtop {
+  user-select: none;
   background-color: #32697d;
   display: flex;
   justify-content: center;
@@ -58,6 +65,7 @@ color: #cecde2;
 }
 
 .logoimg {
+  user-select: none;
   border-radius: 50%;
   margin: 0;
 }
@@ -115,6 +123,7 @@ color: #cecde2;
 
 
 .searchbutton {
+  user-select: none;
   background-color: #32697d;
   color: #cecde2;
   border: 1px solid transparent;
@@ -136,6 +145,7 @@ color: #cecde2;
 }
 
 .buttondropdown {
+  user-select: none;
 all: unset;
 cursor: pointer;
 font-size: 28px;
@@ -160,6 +170,7 @@ outline-offset: 4px;
 }
 
 .menu {
+  user-select: none;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -199,6 +210,7 @@ margin: 0;
 }
 
 .closemenu {
+  user-select: none;
   position: fixed;
   right: 380px;
   background-color: transparent;
@@ -211,7 +223,6 @@ margin: 0;
   margin: 0;
   opacity: 0;
   transition: opacity 0.35s ease, color;
-  z-index: 997;
   font-size: 30px;
   color: #cecde2;
   cursor: pointer;
@@ -227,13 +238,54 @@ margin: 0;
   color: white;
 }
 
-.divcarousel {
+.divcarouseltop {
+  user-select: none;
   width: 80%;
   height: auto;
   align-self: center;
+  margin-bottom: 2px;
 }
 
-.carouselimgsize{
+.carouselimgsizetop{
   width: 100%;
   height: 250px;
+}
+
+.divcontentproducts {
+  width: 75%;
+  height: auto;
+  background: transparent;
+  gap: 10px;
+}
+
+.divproducts {
+  width: 24%;
+  background-color: #97afba;
+  height: auto;
+  padding: 5px;
+  gap: 5px;
+  aspect-ratio: 1/1;
+  text-align: left;
+}
+
+.products {
+  width: 40%;
+  height: auto;
+  background: transparent;
+  aspect-ratio: 1/1;
+}
+
+.produtslabel {
+  font-size: 20px;
+}
+
+.moreproducts {
+  font-size: 15px;
+  transition: color;
+  text-decoration: none;
+}
+
+.moreproducts:hover{
+  color: white;
+  cursor: pointer;
 }
