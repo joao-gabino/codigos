@@ -1,186 +1,402 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>site testes</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>site testes</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<script src="https://kit.fontawesome.com" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@600&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
+    <script type="text/javascript" charset="utf-8" src="script.js"></script>
 
-<script type="text/javascript" charset="utf-8" src="script.js"></script>
-<link rel="stylesheet" href="styles.css" />
-</head>
+    <link rel="stylesheet" href="styles.css" />
 
-<body>
-  
-<button class="blocker collapse" id="blocker" data-bs-toggle="collapse" data-bs-target="#blocker" aria-expanded="false" aria-controls="blocker"></button>
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
 
-<nav class = "navbar divtop d-flex justify-content-around" data-bs-theme="dark">
-  <div class="d-flex">
-    <a class="colorwhite logoicon" href="index.html" title="Homepage">
-      <i class="fa-solid fa-g"></i>
-    </a>
-  </div>
-  
-  <form class="divsearch" data-bs-theme="dark" role="search">
-    <input class="form-control me-2 searchbar shadow-none" style="--color : #cecde2"type="search" placeholder="Search" aria-label="Search" list="datalistOptions"/>
-    <button class="btn searchbutton shadow-none focus-none" font-size="20px" type="submit" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-  </form>
-  
-  <datalist id="datalistOptions">
-    <option value="item1">
-    <option value="item2">
-    <option value="item3">
-    <option value="item4">
-    <option value="item5">
-  </datalist>
-  
-  <div class="dropdown" title="Menu">
-    <button class="buttondropdown menu-toggle closemenu-toggle"data-bs-toggle="collapse" data-bs-target="#blocker" aria-expanded="false" aria-controls="blocker">
-      <span class="fa fa-bars"></span>
-    </button>
+  <body>
+    <nav
+      class="navbar divtop d-flex justify-content-around noselect"
+      data-bs-theme="dark"
+    >
+      <div class="d-flex">
+        <a class="colorwhite logoicon" href="/" title="Homepage">
+          <i class="fa-solid fa-g"></i>
+        </a>
+      </div>
 
+      <form
+        class="divsearch"
+        data-bs-theme="dark"
+        role="search"
+        id="forumsearch"
+      >
+        <input
+          class="form-control me-2 searchbar shadow-none"
+          id="inputsearch"
+          style="--color: #cecde2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          list="datalistOptions"
+        />
+        <button
+          class="btn searchbutton shadow-none focus-none"
+          font-size="20px"
+          type="submit"
+          title="Search"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
 
-  </div>
-</nav>
+      <datalist id="datalistOptions">
+        <option value="item1"></option>
+        <option value="item2"></option>
+        <option value="item3"></option>
+        <option value="item4"></option>
+        <option value="item5"></option>
+      </datalist>
 
-  <ul class="menu" data-bs-toggle="collapse" data-bs-target="#blocker" aria-expanded="false" aria-controls="blocker">
-    <li><a class="colorwhite" href="#">Item 1</a></li>
-    <li><a class="colorwhite" href="#">Item 2</a></li>
-    <li><a class="colorwhite" href="#">Item 3</a></li>
-    <li><a class="colorwhite" href="#">Item 4</a></li>
-  </ul>
-    
-  <button class = "closemenu menu-toggle" data-bs-toggle="collapse" data-bs-target="#blocker" aria-expanded="false" aria-controls="blocker" title="Close"> <i class="fa-solid fa-xmark"></i> </button>
+      <div class="dropdown" title="Menu" data-bs-target="menu">
+        <button
+          class="buttondropdown btn"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menu"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+      </div>
+    </nav>
 
-<div id="carouselExampleAutoplaying" class="carousel slide divcarouseltop" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://uploads.onecompiler.io/4473vjn57/449trnyey/carousel%201.jpg" class="d-block carouselimgsizetop" alt="...">
+    <div
+      class="offcanvas offcanvas-start menu"
+      tabindex="-1"
+      aria-labledby="offcanvasmenuheader"
+      id="menu"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title colorwhite" id="offcanvasmenuheader">
+          Menu
+        </h5>
+      </div>
+      <div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed menuaccordionitems colorwhite"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Accordion Item #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body menuaccordioncontent colorwhite">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                first item’s accordion body.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed menuaccordionitems colorwhite"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body menuaccordioncontent colorwhite">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                second item’s accordion body. Let’s imagine this being filled
+                with some actual content.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed menuaccordionitems colorwhite"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body menuaccordioncontent colorwhite">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item’s accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://uploads.onecompiler.io/4473vjn57/449trnyey/abstract-studio-background-texture-light-blue-gray-gradient-wall-flat-floor-product.jpg" class="d-block carouselimgsizetop" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://uploads.onecompiler.io/4473vjn57/449trnyey/paper-background.jpg" class="d-block carouselimgsizetop" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-<div class="d-flex flex-row justify-content-evenly align-content-around flex-wrap align-self-center divcontentproducts">
-  
-  <div class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts">
-    
-    <h3 class="container-fluid productslabel">
-      Produtos
-    </h3>
-    <div class="d-flex products">
-      aaaaaaaaaaaaa
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide divcarouseltop noselect"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://uploads.onecompiler.io/4473vjn57/449trnyey/carousel%201.jpg"
+            class="d-block carouselimgsizetop"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://uploads.onecompiler.io/4473vjn57/449trnyey/abstract-studio-background-texture-light-blue-gray-gradient-wall-flat-floor-product.jpg"
+            class="d-block carouselimgsizetop"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://uploads.onecompiler.io/4473vjn57/449trnyey/paper-background.jpg"
+            class="d-block carouselimgsizetop"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="d-flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    
-    <a href="#" class="moreproducts colorwhite container-fluid">
-      Ver mais
-    </a>
-    
-  </div>
-  
-  <div class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts">
-    
-    <h3 class="container-fluid productslabel">
-      Produtos
-    </h3>
-    <div class="d-flex products">
-      aaaaaaaaaaaaa
-    </div>
-    <div class="d-flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    
-    <a href="#" class="moreproducts colorwhite container-fluid">
-      Ver mais
-    </a>
-    
-  </div>
-  
-  <div class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts">
-    
-    <h3 class="container-fluid productslabel">
-      Produtos
-    </h3>
-    <div class="d-flex products">
-      aaaaaaaaaaaaa
-    </div>
-    <div class="d-flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    
-    <a href="#" class="moreproducts colorwhite container-fluid">
-      Ver mais
-    </a>
-    
-  </div>
-  
-  <div class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts">
-    
-    <h3 class="container-fluid productslabel colorblack">
-      Produtos
-    </h3>
-    <div class="d-flex products">
-      aaaaaaaaaaaaa
-    </div>
-    <div class="d-flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    <div class="d- flex products">
-      aaaaaaaaaaaaaa
-    </div>
-    
-    <a href="#" class="moreproducts colorwhite container-fluid">
-      Ver mais
-    </a>
-  </div>
-</div>
 
+    <div
+      class="d-flex flex-row justify-content-evenly align-content-around flex-wrap align-self-center divcontentproducts"
+    >
+      <div
+        class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts noselect"
+      >
+        <h3 class="container-fluid productslabel">Produtos</h3>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
 
+        <a href="#" class="moreproducts colorwhite"> Ver mais </a>
+      </div>
 
-</body>
+      <div
+        class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts"
+      >
+        <h3 class="container-fluid productslabel">Produtos</h3>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+
+        <a href="#" class="moreproducts colorwhite"> Ver mais </a>
+      </div>
+
+      <div
+        class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts"
+      >
+        <h3 class="container-fluid productslabel">Produtos</h3>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+
+        <a href="#" class="moreproducts colorwhite"> Ver mais </a>
+      </div>
+
+      <div
+        class="d-flex flex-row justify-content-evenly align-content-around align-items-center flex-wrap divproducts"
+      >
+        <h3 class="container-fluid productslabel">Produtos</h3>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d-flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href=""
+            ><img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+          /></a>
+        </div>
+        <div class="d- flex products">
+          <a href="">
+            <img
+              class="productsimages"
+              src="https://uploads.onecompiler.io/4473vjn57/449trnyey/quadro%20branco.png"
+              alt="quadro branco"
+            />
+          </a>
+        </div>
+
+        <a href="#" class="moreproducts colorwhite"> Ver mais </a>
+      </div>
+    </div>
+  </body>
 </html>
