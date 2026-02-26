@@ -1,12 +1,11 @@
-
-:root {
-  --bs-focus-ring-color: rgba(185, 215, 253, 0);
-
-$input-btn-font-family: "Nunito", sans-serif;
-
-
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -15,34 +14,14 @@ body {
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
 }
-.blocker {
-  user-select: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: black;
-  opacity: 0.75;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  transition: height;
-  z-index: 999;
-  transition: opacity 0,1s ease;
-  cursor: default;
-  border: none;
-}
 
 .colorwhite {
-color: #cecde2;
+  color: #cecde2;
 }
 
 .colorblack {
@@ -96,7 +75,7 @@ color: #cecde2;
   height: 40px;
   width: 80%;
   text-align: center;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
@@ -105,22 +84,14 @@ color: #cecde2;
   color: #cecde2;
 }
 
-
-
 .searchbar:hover {
   border: 2px solid #cecde2;
 }
 
-[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    background-color: var(--color);
-    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
-    background-size: 20px 20px;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
+.searchbar:focus {
+  background-color: #013746;
+  border: 1px solid #cecde2;
 }
-
 
 .searchbutton {
   user-select: none;
@@ -146,27 +117,26 @@ color: #cecde2;
 
 .buttondropdown {
   user-select: none;
-all: unset;
-cursor: pointer;
-font-size: 28px;
-color: #9f9eb3;
-width: 55px;
-height: 55px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: color;
-color: #cecde2;
+  all: unset;
+  cursor: pointer;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color;
+  color: #cecde2;
 }
 
 .buttondropdown:hover {
-color: white;
+  color: white;
 }
 
 .buttondropdown:focus-visible {
-outline: 2px solid #9f9eb3;
-outline-offset: 4px;
+  outline: 2px solid #9f9eb3;
+  outline-offset: 4px;
 }
 
 .menu {
@@ -174,68 +144,31 @@ outline-offset: 4px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-position: fixed;
-top: 0;
-right:0;
-width: 365px;
-list-style: none;
-padding: 0;
-background-color: #013746;
-overflow: hidden;
-height: 0;
-transition: height 0.35s ease;
-z-index: 1000;
-margin: 0;
-}
-
-.menu.open {
+  top: 0;
+  right: 0;
+  width: 365px;
+  list-style: none;
+  padding: 0;
+  background-color: #013746;
+  overflow-y: auto;
+  overflow-x: auto;
   height: 100%;
-  overflow: auto;
+  margin: 0;
 }
 
-
-.menu li a {
+.menuitem {
   display: block;
   padding: 10px 16px;
   text-decoration: none;
 }
 
-.menu li a:hover {
+.menuitem:hover {
   opacity: 0.5;
   transition: 0.3s;
 }
 
 .menu hr {
   margin: 6px 0;
-}
-
-.closemenu {
-  user-select: none;
-  position: fixed;
-  right: 380px;
-  background-color: transparent;
-  height: 35px;
-  top: 15px;
-  border: transparent;
-  border-radius: 50%;
-  width: 35px;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  transition: opacity 0.35s ease, color;
-  font-size: 30px;
-  color: #cecde2;
-  cursor: pointer;
-  background-color: 013746;
-}
-
-.closemenu.open {
-  opacity: 1;
-  z-index: 1000;
-}
-
-.closemenu:hover {
-  color: white;
 }
 
 .divcarouseltop {
@@ -246,7 +179,7 @@ margin: 0;
   margin-bottom: 2px;
 }
 
-.carouselimgsizetop{
+.carouselimgsizetop {
   width: 100%;
   height: 250px;
 }
@@ -275,6 +208,12 @@ margin: 0;
   aspect-ratio: 1/1;
 }
 
+.productsimages {
+  aspect-ratio: 1/1;
+  border: none;
+  height: 100%;
+}
+
 .produtslabel {
   font-size: 20px;
 }
@@ -285,7 +224,66 @@ margin: 0;
   text-decoration: none;
 }
 
-.moreproducts:hover{
+.moreproducts:hover {
   color: white;
   cursor: pointer;
+}
+
+.menuaccordionitems {
+  background-color: #013746;
+  border: none;
+  transition: color;
+  margin: 0;
+  padding: none;
+}
+
+.menuaccordionitems:not(.collapse) {
+  background-color: #013746;
+  color: #cecde2;
+}
+
+.menuaccordionitems:focus {
+  border: none;
+  outline: none;
+  color: #cecde2;
+  background-color: #013746;
+  box-shadow: none;
+}
+
+.menuaccordionitems:hover {
+  color: white;
+}
+
+.menuaccordioncontent {
+  background-color: #013746;
+  border: none;
+  margin: 0;
+  outline: none;
+  padding: none;
+}
+
+.menuaccordioncontent:not(.collapse) {
+  background-color: #013746;
+  color: #cecde2;
+}
+
+.accordion,
+.accordion-item,
+.accordion-button {
+  border: none;
+  box-shadow: none;
+  color: #cecde2;
+}
+.accordion,
+.accordion-item,
+.accordion-button:not(.collapse) {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  background-image: none;
 }
